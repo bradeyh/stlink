@@ -158,9 +158,9 @@ The rules are located in the subdirectory `etc/udev/rules.d` within the sourcefo
 Copy them to the directory path `/etc/udev/rules.d` and subsequently reload the udev rules:
 
 ```sh
-$ cp etc/udev/rules.d /etc/udev/rules.d
-$ udevadm control --reload-rules
-$ udevadm trigger
+$ sudo cp etc/udev/rules.d/* /etc/udev/rules.d/
+$ sudo udevadm control --reload-rules
+$ sudo udevadm trigger
 ```
 
 Udev will now create device node files `/dev/stlinkv2_XX`, `/dev/stlinkv1_XX`.
